@@ -41,7 +41,7 @@ class FeedbackController extends Controller
 
     public function show(){
         try{
-            $feedback =$this->feedbackRepositoryInterface->showAll();
+            $table =$this->feedbackRepositoryInterface->showAll();
             return view('fedbackshow',compact('table'));
         }catch(\Exception $exception){
             Log::error($exception);
