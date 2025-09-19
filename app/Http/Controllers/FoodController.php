@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\food;
 use Illuminate\Http\Request;
 use App\Interfaces\FoodRepositoryInterface;
 use Illuminate\Support\Facades\DB;
