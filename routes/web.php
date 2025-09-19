@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\AuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +11,7 @@
 |
 */
 
+Route::post('/register',[AuthController::class,'userRegister'])->name('register');
 Route::get('/', function () {
     return view('welcome');
 });
@@ -34,10 +35,10 @@ Route::get('/feedback', function () {
     return view('feedback');
 });
 
-Route::post('student',[
-    'uses'=>'studentController@studentregistation',
-    'as'=>'student'
-]);
+// Route::post('student',[
+//     'uses'=>'studentController@studentregistation',
+//     'as'=>'student'
+// ]);
 Route::post('feedback',[
     'uses'=>'feedbackController@feedback',
     'as'=>'feedback'
@@ -59,10 +60,10 @@ Route::get('/order', [
 Route::get('/adminadd', function () {
     return view('adminadd');
 });
-Route::post('adminregistation',[
-    'uses'=>'AdminController@registation',
-    'as'=>'adminregistation'
-]);
+// Route::post('adminregistation',[
+//     'uses'=>'AdminController@registation',
+//     'as'=>'adminregistation'
+// ]);
 
 Route::get('/studentshow', [
     'uses'=>'UserController@show'

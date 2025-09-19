@@ -7,4 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class User extends Model implements Authenticatable
 {
     use \Illuminate\Auth\Authenticatable;
+
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+        'role',
+        'id_number',
+        'contact_number',
+        'faculty'
+    ];
 }
