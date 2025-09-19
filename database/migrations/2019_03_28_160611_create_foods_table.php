@@ -16,7 +16,7 @@ class CreateFoodsTable extends Migration
         Schema::create('foods', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('price');
+            $table->double('price');
             $table->rememberToken();
             $table->timestamps();
         });
