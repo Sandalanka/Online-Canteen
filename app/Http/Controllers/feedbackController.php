@@ -12,6 +12,7 @@ class FeedbackController extends Controller
     private FeedbackRepositoryInterface $feedbackRepositoryInterface;
     
         
+        
     /**
      * __construct
      *
@@ -22,7 +23,7 @@ class FeedbackController extends Controller
        $this->feedbackRepositoryInterface = $feedbackRepositoryInterface;
     }
 
-    public function feedback(Request $request){
+    public function feedback(FeedbackRequest $request){
         try{
             DB::beginTransaction();
               $details =[
