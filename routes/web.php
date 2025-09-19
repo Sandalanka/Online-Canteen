@@ -40,7 +40,7 @@ Route::get('/feedback', function () {
 //     'as'=>'student'
 // ]);
 Route::post('feedback',[
-    'uses'=>'feedbackController@feedback',
+    'uses'=>'FeedbackController@feedback',
     'as'=>'feedback'
 ]);
 Route::post('slogin',[
@@ -72,7 +72,7 @@ Route::get('/studentshow', [
 );
 
 Route::get('/feedbackshow', [
-    'uses'=>'feedbackController@show'
+    'uses'=>'FeedbackController@show'
 ]
 
 );
