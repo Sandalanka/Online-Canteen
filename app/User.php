@@ -17,4 +17,8 @@ class User extends Model implements Authenticatable
         'contact_number',
         'faculty'
     ];
+
+    public function order(){
+        return $this->hasMany(Order::class);
+    }
 }
