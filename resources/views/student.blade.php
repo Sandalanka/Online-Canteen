@@ -30,7 +30,7 @@ student registation
 </div>
 </nav>
 <h1 style="color:red">Student Registation</h1>
-<form method="post" action="{{route('student')}}">
+<form method="post" action="{{route('register')}}">
   <div class="form-group">
     <label for="exampleInputEmail1">Full Name</label>
     <input type="text"name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
@@ -47,6 +47,10 @@ student registation
   
   </div>
   <div class="form-group">
+    <label for="exampleInputPassword1">Contact</label>
+    <input type="number" name="contact" class="form-control" id="exampleInputPassword1" placeholder="contact">
+  </div>
+  <div class="form-group">
     <label for="exampleInputEmail1">Email</label>
     <input type="email"name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
   
@@ -55,7 +59,8 @@ student registation
     <label for="exampleInputPassword1">Password</label>
     <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
   </div>
-  
+
+  <input type="hidden"name="role" class="form-control" data="student">
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 <div class="card bg-dark text-white">
